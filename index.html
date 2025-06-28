@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <body>
+<body>
+
 <audio id="music" src="musik.mp3" autoplay loop></audio>
 
 <script>
 const music = document.getElementById('music');
-music.volume = 0; // Autoplay berjalan tanpa suara
+music.volume = 0; // Mulai dengan mute agar autoplay jalan
 
-// Setelah user klik layar, aktifkan volume
+// Setelah user klik di mana saja di layar
 document.addEventListener('click', () => {
-  music.volume = 0.5;
+  music.volume = 0.5; // Aktifkan suara
 });
 </script>
-<\body>
-    <\html>
+
+</body>
+</html>
