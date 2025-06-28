@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <body>
-<audio autoplay>
-  <source src = " SpotiDown.App - bergema sampai
+<audio id="musik" src = " SpotiDown.App - bergema sampai
     selamanya - Stripped Version
-    - Nadhif Basalamah.mp3" type="audio/,mp3"/>
+    - Nadhif Basalamah.mp3"
 </audio>
+  <button onclick="musik.play()">play</button>
+    <button onclick="musik.pause()">play</button>
+  <script> const musik= document.getElementById('musik');
+  music.volume =0.5;
+  </script>
 </body>
 </html>
