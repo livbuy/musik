@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-<body>
-<audio id="musik" src = " SpotiDown.App - bergema sampai
-    selamanya - Stripped Version
-    - Nadhif Basalamah.mp3"
-</audio>
-  <button onclick="musik.play()">play</button>
-    <button onclick="musik.pause()">play</button>
-  <script> const musik= document.getElementById('musik');
-  music.volume =0.5;
-  </script>
-</body>
-</html>
+    <body>
+<audio id="music" src="musik.mp3" autoplay loop></audio>
+
+<script>
+const music = document.getElementById('music');
+music.volume = 0; // Autoplay berjalan tanpa suara
+
+// Setelah user klik layar, aktifkan volume
+document.addEventListener('click', () => {
+  music.volume = 0.5;
+});
+</script>
+<\body>
+    <\html>
