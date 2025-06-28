@@ -2,16 +2,19 @@
 <html>
 <body>
 
-<audio id="music" src="musik.mp3" autoplay loop></audio>
+<!-- Gambar yang bisa ditekan -->
+<img src="image04.png" alt="Klik untuk Musik" style="width:200px;cursor:pointer;" onclick="playMusic()">
+
+<!-- Audio -->
+<audio id="music" src="musik.mp3"></audio>
 
 <script>
 const music = document.getElementById('music');
-music.volume = 0; // Mulai dengan mute agar autoplay jalan
 
-// Setelah user klik di mana saja di layar
-document.addEventListener('click', () => {
-  music.volume = 0.5; // Aktifkan suara
-});
+function playMusic() {
+  music.play();
+  music.volume = 0.5;
+}
 </script>
 
 </body>
