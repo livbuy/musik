@@ -1,6 +1,107 @@
 <!DOCTYPE html>
 <html>
 <body>
+  <style>
+    /* Reset & Dasar */
+    body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+
+    /* Baris Pertama: Putih (Main Header) */
+    .main-header {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 60px;
+        height: 50px;
+    }
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo-text-bold {
+        font-family: 'Cinzel', serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+        letter-spacing: 1px;
+    }
+
+    .nav-left-links {
+        display: flex;
+        gap: 20px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .nav-left-links span:hover { color: #0087e0; cursor: pointer; }
+
+    .nav-right-auth {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .btn-pink {
+        background-color: #f20091; /* Warna pink khas freelancer */
+        color: white;
+        padding: 8px 16px;
+        border-radius: 3px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .btn-pink:hover { background-color: #c10074; }
+
+    /* Baris Kedua: Gelap (Sub-navigation) */
+    .sub-header {
+        background-color: #0e1724; /* Warna biru gelap */
+        color: #ffffff;
+        padding: 8px 60px;
+        display: flex;
+        gap: 25px;
+        font-size: 13px;
+    }
+
+    .sub-header span {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .sub-header span:hover { opacity: 1; }
+</style>
+
+<header>
+    <div class="main-header">
+        <div class="logo-section">
+            <div style="width: 30px; height: 30px; background: #333; color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold;">K</div>
+            <div class="logo-text-bold">KURNIAWAN</div>
+            <div class="nav-left-links">
+                <span>Cara Kerjanya</span>
+                <span>Telusuri Fosil</span>
+            </div>
+        </div>
+
+        <div class="nav-right-auth">
+            <span style="color: #555; cursor: pointer;">Login</span>
+            <span style="color: #555; cursor: pointer;">Daftar</span>
+            <a href="#" class="btn-pink">Cari Spesies</a>
+        </div>
+    </div>
+
+    <div class="sub-header">
+        <span>Cari Temuan</span>
+        <span>Cari Peneliti</span>
+        <span>Dapatkan Ide</span>
+        <span>Sumber Daya</span>
+    </div>
+</header>
+
 
 <!-- Gambar yang bisa ditekan -->
 <img src="image04.jpg" alt="Klik untuk Musik" style="width:200px;cursor:pointer;" onclick="playMusic()">
