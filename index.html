@@ -1,111 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You 🤍</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000000; /* Hitam khas */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .main-container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .spotify-container {
+            margin-bottom: 25px;
+        }
+
+        .message-container {
+            background-color: #1a1a1a; /* Kotak pesan sedikit terang */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+            display: none; /* Awalnya disembunyikan */
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 15px;
+            color: #e0e0e0;
+            text-align: left;
+            margin: 0;
+        }
+
+        /* Tombol Start */
+        #startButton {
+            background-color: #1DB954; /* Hijau Spotify */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        #startButton:hover {
+            background-color: #1ed760;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
 <body>
-  <style>
-    /* Reset & Dasar */
-    body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; }
 
-    /* Baris Pertama: Putih (Main Header) */
-    .main-header {
-        background-color: #ffffff;
-        border-bottom: 1px solid #e0e0e0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 60px;
-        height: 50px;
-    }
-
-    .logo-section {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .logo-text-bold {
-        font-family: 'Cinzel', serif;
-        font-weight: bold;
-        font-size: 20px;
-        color: #333;
-        letter-spacing: 1px;
-    }
-
-    .nav-left-links {
-        display: flex;
-        gap: 20px;
-        font-size: 14px;
-        color: #555;
-    }
-
-    .nav-left-links span:hover { color: #0087e0; cursor: pointer; }
-
-    .nav-right-auth {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        font-size: 14px;
-    }
-
-    .btn-pink {
-        background-color: #f20091; /* Warna pink khas freelancer */
-        color: white;
-        padding: 8px 16px;
-        border-radius: 3px;
-        font-weight: bold;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-
-    .btn-pink:hover { background-color: #c10074; }
-
-    /* Baris Kedua: Gelap (Sub-navigation) */
-    .sub-header {
-        background-color: #0e1724; /* Warna biru gelap */
-        color: #ffffff;
-        padding: 8px 60px;
-        display: flex;
-        gap: 25px;
-        font-size: 13px;
-    }
-
-    .sub-header span {
-        opacity: 0.8;
-        cursor: pointer;
-    }
-
-    .sub-header span:hover { opacity: 1; }
-</style>
-
-<header>
-    <div class="main-header">
-        <div class="logo-section">
-            <div style="width: 30px; height: 30px; background: #333; color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-weight: bold;">K</div>
-            <div class="logo-text-bold">FJK TECHNOLOGY</div>
-            <div class="nav-left-links">
-                
-            </div>
+    <div class="main-container">
+        
+        <div id="landingView">
+            <h1>Ada pesan khusus buat kamu... 💌</h1>
+            <button id="startButton" onclick="startExperience()">Buka Pesan</button>
         </div>
 
-        
+        <div id="messageView" class="message-container">
+            
+            <div class="spotify-container">
+                <iframe 
+                    src="https://open.spotify.com/track/5qNudLbjQ86iXul64YwKjE?si=af8ca20087574386" 
+                    width="100%" 
+                    height="80" 
+                    frameborder="0" 
+                    allowtransparency="true" 
+                    allow="encrypted-media">
+                </iframe>
+            </div>
 
-    
-</header>
+            <p>
+                Hai,<br><br>
+                Aku duduk di sini memikirkanmu, dan rasanya aku cuma ingin menuangkan semua isi hatiku ke dalam tulisan ini...
+                <br><br>
+                <em>(isi pesan kamu di sini)</em>
+            </p>
+        </div>
 
+    </div>
 
-<!-- Gambar yang bisa ditekan -->
-<img src="image04.jpg" alt="Klik untuk Musik" style="width:200px;cursor:pointer;" onclick="playMusic()">
-
-<!-- Audio -->
-<audio id="music" src="SpotiDown.App - bergema sampai selamanya - Stripped Version - Nadhif Basalamah.mp3"></audio>
-
-<script>
-const music = document.getElementById('music');
-
-function playMusic() {
-  music.play();
-  music.volume = 0.5;
-}
-</script>
+    <script>
+        function startExperience() {
+            // Sembunyikan Landing View
+            document.getElementById("landingView").style.display = "none";
+            // Tampilkan Pesan View
+            document.getElementById("messageView").style.display = "block";
+        }
+    </script>
 
 </body>
 </html>
